@@ -1,0 +1,65 @@
+input{
+    display: none;
+}
+label {
+    position: absolute;
+    top:-10vh;
+    animation: 6s carousselle linear infinite;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(1, 255, 255, 1);
+    cursor: pointer;
+}
+#rer + label {
+    animation: none;
+    top: 80vh;
+    padding: 0.21em;
+}
+#rer:checked + label{
+    top: -10vh;
+}
+#l1 {
+    animation-delay: 0s;
+}
+#l2 {
+    animation-delay: 1s;
+}
+#l3 {
+    animation-delay: 2s;
+}
+#l4 {
+    animation-delay: 3s;
+}
+#l5 {
+    animation-delay: 4s;
+}
+#l6 {
+    animation-delay: 5s;
+}
+
+@keyframes carousselle {
+    from {
+        opacity: 100;
+        top: 80vh;
+    }
+    16% {
+        opacity: 100;
+        top: 80vh;
+    }
+    17%{
+        opacity: 0;
+        top: 80vh;
+    }
+    18%{
+        opacity: 0;
+        top: -10vh;
+    }
+    to {
+        opacity: 0;
+        top: -10vh;
+    }
+}
